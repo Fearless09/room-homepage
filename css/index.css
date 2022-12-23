@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.1s ease;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    box-sizing: border-box;
+    font-size: 15pX;
+    line-height: 1.5;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    margin: 0px auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin-top: 25px;
+    position: relative;
+}
+
+ul button {
+    background: none;
+    display: none;
+}
+
+li {
+    display: inline;
+    margin: 0px 5px;
+    padding: 10px 20px;
+}
+
+a:hover {
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    padding-bottom: 10px;
+    transition: 500ms;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 0px;
+}
+
+.next, .previous {
+    border: none;
+    background-color: black;
+    padding: 15px 25px;
+    margin: 0px;
+    border: none;
+    border-radius: 0px;
+}
+
+.next {
+    margin-left: -5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 27%);
+}
+
+p {
+    color: hsl(0, 0%, 63%);
+    transition: all 2s ease-in-out;
+}
+
+.flex {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    margin: 0px;
+    padding: 0px;
+    min-height: 60vh;
+}
+
+.flex .tree {
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all 2s ease-in-out;
+    color: white;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    padding: 20px 100px 0px;
+    position: relative;
+}
+
+.tree h2:hover {
+    transform: scale(2);
+    cursor: zoom-in;
+}
+
+.tree .hamburger {
+    margin-top: 25px;
+    display: none;
+    border: none;
+    background: none;
+}
+
+.flex .discover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.discover h1 {
+    transition: all 2s ease-in-out;
+}
+
+
+.discover .shop {
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    word-spacing: 1ex;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.discover .shop:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.tree-btn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+}
+
+.discover-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    min-height: 35vh;
+}
+
+.card {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 100px 30px;
+}
+
+.card:nth-of-type(1) {
+    background-image: url('../images/image-about-dark.jpg');
+    transition: all 2s ease-in-out;
+}
+
+.card:nth-of-type(2) {
+    background: hsl(0, 0%, 100%, 50%);
+}
+
+.card:nth-of-type(3) {
+    background-image: url('../images/image-about-light.jpg');
+    transition: all 2s ease-in-out;
+}
+
+.card:nth-of-type(2):hover {
+    transform: scale(1.1);
+    cursor: progress;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+    font-style: italic;
+}
+
+
+@media (max-width: 1024px) {
+    .flex {
+        min-height: 45vh;
+    }
+    .flex .tree {
+        gap: 20px;
+        padding: 20px 0px 0px 50px;
+    }
+    .flex .discover {
+        padding: 50px 50px;
+    }
+    .grid {
+        min-height: auto;
+    }
+    .card {
+        padding: 50px 50px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    .flex {
+        min-height: auto;
+    }
+
+    ul {
+        margin-top: 19px;
+    }
+
+    .flex .discover {
+        padding: 30px 50px 70px;
+    }
+
+    .discover .shop {
+        font-size: 12px;
+        word-spacing: normal;
+    }
+
+    .card {
+        padding: 30px 30px 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    .menu {
+        display: none;
+        transition: all 5s ease-in-out;
+    }
+    ul {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        padding: 0px 30px;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    ul button {
+        display: inline;
+        border: none;
+        margin-top: 6px;
+    }
+
+    li {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    ul li a {
+        color: black;
+        font-size: 15px;
+    }
+    .flex {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .tree .hamburger {
+        display: inline;
+        margin-top: 20px;
+    }
+
+    .flex .tree {
+        justify-content: space-between;
+        padding: 15px 30px;
+    }
+
+    .flex .discover {
+        padding: 30px 50px;
+    }
+
+    .tree-btn {
+        display: inline;
+    }
+    
+    .discover-btn {
+        display: none;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
